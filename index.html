@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Saúde 💪</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💪 Diário de Saúde</h1>
+        <p class="data" id="dataHoje"></p>
+
+        <section class="secao">
+            <h2>💧 Água</h2>
+            <p class="contador"><span id="aguaAtual">0</span> / 2000 ml</p>
+            <div class="progresso">
+                <div id="barraAgua"></div>
+            </div>
+            <div class="botoes">
+                <button onclick="adicionarAgua(250)">+ 250 ml</button>
+                <button onclick="adicionarAgua(500)">+ 500 ml</button>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2>🍎 Refeições</h2>
+            <p class="contador"><span id="refeicoesCount">0</span> / 5 refeições</p>
+            <div class="progresso">
+                <div id="barraRefeicoes"></div>
+            </div>
+            <div class="botoes">
+                <button onclick="adicionarRefeicao()">+ 1 Refeição</button>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2>🏃 Exercícios</h2>
+            <p class="contador"><span id="exerciciosMin">0</span> minutos</p>
+            <div class="botoes">
+                <button onclick="adicionarExercicio(10)">+ 10 min</button>
+                <button onclick="adicionarExercicio(30)">+ 30 min</button>
+            </div>
+        </section>
+
+        <section class="secao resumo">
+            <h2>📊 Resumo do Dia</h2>
+            <ul id="listaResumo">
+                <li>Água: <span id="resAgua">0</span> ml</li>
+                <li>Refeições: <span id="resRefeicoes">0</span></li>
+                <li>Exercícios: <span id="resExercicios">0</span> min</li>
+            </ul>
+            <p id="mensagemFinal"></p>
+        </section>
+
+        <button onclick="resetarTudo()" class="btn-reset">Reiniciar Dia</button>
+    </div>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
